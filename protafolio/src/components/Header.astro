@@ -1,11 +1,36 @@
-<header class="flex justify-between items-center py-3 w-[1520px] m-auto">
-  <div class="flex flex-row items-center">
-    <h1 class="font-semibold ml-5">&#60;Oriol Marquès No/&#62;</h1>
+---
+
+---
+
+<header class="fixed py-3 w-full z-50">
+  <div class="w-[1520px] flex justify-between items-center m-auto">
+    <div class="flex flex-row items-center">
+      <h1 class="font-semibold ml-5">&#60;Oriol Marquès No/&#62;</h1>
+    </div>
+    <nav class="flex flex-row gap-x-10">
+      <a href="#home">Inicio</a>
+      <a href="#about">Sobre mi</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#contact">Contacto</a>
+    </nav>
   </div>
-  <nav class="flex flex-row gap-x-10">
-    <a href="#">Inicio</a>
-    <a href="#">Sobre mi</a>
-    <a href="#">Proyectos</a>
-    <a href="#">Contacto</a>
-  </nav>
 </header>
+
+<script>
+  console.log(window.screenX);
+
+  function enableParallax() {
+    const header = document.querySelector("header");
+    if (!header) return;
+    const targets = document.querySelectorAll(".scroll");
+
+    window.addEventListener("scroll", () => {
+      const offset = window.scrollY / 10;
+      if (offset < 10) header.classList.remove("shadow-md", "bg-[#1f1f2e15]");
+      else header.classList.add("shadow-md", "bg-[#1f1f2e15]");
+      console.log(offset, header);
+    });
+  }
+
+  enableParallax();
+</script>
