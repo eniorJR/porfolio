@@ -1,0 +1,44 @@
+---
+import ContactBtn from "../components/ContactBtn.astro";
+import { Icon } from "astro-icon/components";
+const contactTypes = [
+  { name: "WhatsApp", icon: "whatsapp", url: "https://wa.me/34620574839" },
+  { name: "Email", icon: "email", url: "mailto:marquesnooriok@gmail.com" },
+  { name: "Llamar", icon: "call", url: "tel:+34620574839" },
+];
+---
+
+<div class="mt-20 rounded-full border-t w-screen border-[#414853]">
+  <section class="py-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+    <div class="max-w-7xl mx-auto text-center">
+      <div class="flex justify-center mb-8">
+        <div class="rounded-full border-4 border-gray-300 p-4">
+          <Icon name="handshake2" size={100} />
+        </div>
+      </div>
+      <h2
+        class="bg-gradient-to-r from-white via-white to-gray-600 inline-block text-transparent bg-clip-text text-4xl text-center"
+      >
+        Háblame de tu
+
+        <b>Próximo Proyecto</b>
+      </h2>
+      <div
+        class="[&>p]:mb-4 [&>p>strong]:text-gray-300 dark:[&>p>strong]:text-gray-400 text-pretty w-[650px] mt-12 font-extralight"
+      >
+        <p>
+          Estoy emocionado por conocer tu próximo proyecto y ayudarte a hacerlo
+          realidad. Ya sea que tengas una idea en mente o necesites apoyo con un
+          proyecto existente, estaré encantado de colaborar contigo.
+        </p>
+        <p>
+          No dudes en contactarme para discutir más detalles. Juntos, podemos
+          lograr grandes cosas y llevar tu proyecto al siguiente nivel.
+        </p>
+      </div>
+      <div class="flex flex-row items-center justify-center gap-4">
+        {contactTypes.map((contact) => <ContactBtn {...contact} />)}
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,18 @@
+---
+import { Icon } from "astro-icon/components";
+interface Props {
+  name: string;
+  icon: string;
+  url: string;
+}
+
+const { name, icon, url } = Astro.props;
+---
+
+<a href={url} target="_blank">
+  <span
+    class="animate-tilt text-white text-2xl mt-10 font-medium me-2 px-2.5 py-0.5 h-10 rounded-xl dark:bg-[#242424] dark:text-white flex flex-row items-center hover:bg-[#1a1a1a] hover:cursor-pointer"
+  >
+    <Icon name={icon} />&nbsp; {name}</span
+  >
+</a>

@@ -1,0 +1,42 @@
+---
+import Project from "../components/Project.astro";
+
+const projects = [
+  {
+    title: "Esfera Verda",
+    description: "Venta de productos ecológicos.",
+    subddescription:
+      "Diseño y desarrollo de web para la venta online con uso de Prestashop.",
+    image: "/esfera.png",
+    alt: "Esfera Verda",
+  },
+  {
+    title: "Hit Systems",
+    description: "Venta de terminales de punto de venta.",
+    subddescription: "Diseño y desarrollo del terminal con uso de VueJS.",
+    image: "/hit.png",
+    alt: "Hit Systems",
+  },
+  {
+    title: "Plik App",
+    description: "App para compartir imagenes",
+    subddescription:
+      "Diseño y desarrollo de la app con uso de Angular y Ionic Framework.",
+    image: "/plik.png",
+    alt: "Plik",
+  },
+];
+---
+
+<section
+  class="mt-28 w-full mx-auto lg:[740px] flex justify-center flex-col items-center"
+>
+  <h2
+    class="bg-gradient-to-r from-white via-white to-gray-600 inline-block text-transparent bg-clip-text text-4xl"
+  >
+    He trabajado en estos <b>proyectos</b>
+  </h2>
+  <div class="flex w-[1520px] justify-between items-center">
+    {projects.map((project) => <Project {...project} />)}
+  </div>
+</section>
