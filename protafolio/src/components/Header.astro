@@ -23,12 +23,27 @@
     const header = document.querySelector("header");
     if (!header) return;
     const targets = document.querySelectorAll(".scroll");
+    //
+    const btns = document.querySelectorAll("a");
+    const [home, about, projects, contact] = btns;
+
+    function getBtn(n: number) {
+      if (!header) return;
+      console.log(n, [home, about, projects, contact]);
+      btns.forEach((x) => {
+        x.classList.remove("text-gray-400");
+      });
+      if (n < 40) home.classList.add("text-gray-400");
+      else if (n < 112) about.classList.add("text-gray-400");
+      else if (n < 152) projects.classList.add("text-gray-400");
+      else if (n > 152) contact.classList.add("text-gray-400");
+    }
 
     window.addEventListener("scroll", () => {
       const offset = window.scrollY / 10;
+      getBtn(offset);
       if (offset < 10) header.classList.remove("shadow-md", "bg-[#1f1f2e15]");
       else header.classList.add("shadow-md", "bg-[#1f1f2e15]");
-      console.log(offset, header);
     });
   }
 
