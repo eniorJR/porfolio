@@ -45,19 +45,19 @@ Para ver mi portafolio localmente, sigue estos pasos:
 
 1. Clona el repositorio:
 ```bash
-   git clone https://github.com/eniorJR/porfolio.git
+git clone https://github.com/eniorJR/porfolio.git
 ```
 2. Navega al directorio del proyecto:
 ```bash
-  cd porfolio
+cd porfolio
 ```
 3. Instala las dependencias:
 ```bash
-   npm install
+npm install
 ```
 4. Inicia el servidor de desarrollo:
 ```bash
-   npm run dev
+npm run dev
 ```
 
 ## Licencia
