@@ -9,7 +9,7 @@ interface Props {
 const { name, icon, url } = Astro.props;
 ---
 
-<a href={url} target="_blank">
+<a href={url} title={"Contact | " + name} target="_blank" rel="noreferrer">
   <span
     class="animate-tilt text-white text-2xl mt-10 font-medium me-2 px-2.5 py-0.5 h-10 rounded-xl bg-[#242424] flex flex-row items-center hover:bg-[#1a1a1a] hover:cursor-pointer"
   >
