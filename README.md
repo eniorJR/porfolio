@@ -1,7 +1,7 @@
 # Portafolio de Oriol Marquès No
 
 <p align="center">
-  <img src="http://localhost:4321/oriol.png" alt="Foto de Oriol Marquès No" width="200px" height="200px">
+  <img src="https://porfolio-wheat-two.vercel.app/oriol.png" alt="Foto de Oriol Marquès No" width="200px" height="200px">
 </p>
 
 <h2 align="center">Hola! Soy Oriol 👋</h2>
