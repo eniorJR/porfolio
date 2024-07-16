@@ -44,21 +44,20 @@ Bienvenido a mi portafolio. Soy Oriol Marquès No, un desarrollador web con más
 Para ver mi portafolio localmente, sigue estos pasos:
 
 1. Clona el repositorio:
-   ```bash
+```bash
    git clone https://github.com/eniorJR/porfolio.git
 ```
 2. Navega al directorio del proyecto:
-   ```bash
+```bash
   cd porfolio
 ```
 3. Instala las dependencias:
-   ```bash
+```bash
    npm install
 ```
 4. Inicia el servidor de desarrollo:
-   ```bash
+```bash
    npm run dev
-
 ```
 
 ## Licencia
